@@ -1,0 +1,15 @@
+.user_info{
+    display: flex;
+    align-items: center;
+}
+
+.pic {
+    width: 25px;
+    height: 25px;
+
+    background: black;
+
+    box-sizing: border-box;
+
+    border-radius: 50%;
+}
