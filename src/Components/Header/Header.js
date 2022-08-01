@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <div className={'header'}>
             <div className="project_name">OWU TMBD TASK</div>
-            <div className="switcher">Light/Dark</div>
+            SWITCHER
             <UserInfo/>
         </div>
     );

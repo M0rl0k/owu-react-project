@@ -3,7 +3,7 @@ import MoviesList from "../Components/MoviesList/MoviesList";
 
 const MoviesPage = () => {
     return (
-        <div>
+        <div className={'list_wrapper'}>
             <MoviesList/>
         </div>
     );

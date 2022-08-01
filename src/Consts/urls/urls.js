@@ -4,4 +4,6 @@ const moviesURL = '/discover/movie?page=1';
 
 const genreURL = '/genre/movie/list';
 
-export {baseURL, moviesURL, genreURL}
+const posterURL = 'https://image.tmdb.org/t/p/w500'
+
+export {baseURL, moviesURL, genreURL, posterURL}

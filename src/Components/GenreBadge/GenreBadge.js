@@ -1,9 +1,16 @@
 import React from 'react';
-import Badge from "react-bootstrap/Badge";
+import {useSelector} from "react-redux";
+import './GenreModule.css'
 
 const GenreBadge = () => {
+
+    const genresList = useSelector(state => state.genres.genres)
+
     return (
-        <Badge bg={'primary'}>Genre Name</Badge>
+        genresList.map(genre =>
+            <div className={'genreBadge'} key={genre.id}>
+                {genre.name}
+            </div> )
     );
 };
 
