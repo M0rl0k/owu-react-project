@@ -8,9 +8,6 @@ import {Link} from "react-router-dom";
 const GenreBadge = () => {
 
     const genresList = useSelector(state => state.genres.genres)
-    const selector = useSelector(state => state.genres.selectedGenre);
-
-    console.log(selector)
 
     const dispatch = useDispatch();
 
@@ -20,9 +17,8 @@ const GenreBadge = () => {
     }
 
     return (
-        genresList.map(genre => <Link to={'/'}>
+        genresList.map(genre => <Link to={'/'} key={genre.id}>
             <button className={'genreBadge'}
-                    key={genre.id}
                     onClick={()=> handleClick(genre)}>
                 {genre.name}
             </button>

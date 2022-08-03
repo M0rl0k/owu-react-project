@@ -1,11 +1,16 @@
 body {
-    background: #1d5750
+    transition: 0.3s;
 }
 
 .wrap{
     width: 100%;
-    background: #1d5750;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
 
 .genres_list{
     display: flex;
@@ -13,10 +18,12 @@ body {
     align-items: center;
     flex-wrap: wrap;
 
-    width: 75%;
+    /*width: 75%;*/
 }
 .contentBox{
     width: 100%;
+    min-height: 800px;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,10 +39,17 @@ a {
     justify-content: center;
     align-items: center;
 }
+
 .nav{
     width: 100%;
 }
 
-.dark_mode{
-    background: black;
+.dark_theme{
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(22,21,21,1) 100%);
+}
+
+.light_theme{
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
 }

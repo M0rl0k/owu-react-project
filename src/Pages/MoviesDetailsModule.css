@@ -9,6 +9,12 @@
 
 }
 
+.card-genres{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
 .movie_details_card img {
     width: 400px;
 
@@ -37,6 +43,10 @@
 
     .movie_details_card img{
         width: 100%;
+    }
+
+    svg {
+        width: 25px;
     }
 
 }

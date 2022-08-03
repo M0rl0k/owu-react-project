@@ -10,6 +10,7 @@
     border-radius: 25px;
 
     width: 18%;
+    height: 743px;
     min-width: 350px;
 
     margin: 1% 1%;
@@ -17,8 +18,7 @@
     background: rgba(255, 255, 255, 0.27);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 10.1);
     backdrop-filter: blur(4.8px);
-    -webkit-backdrop-filter: blur(4.8px);
-    border: 1px solid rgba(255, 255, 255, 0.27)
+    border: 2px solid rgba(255, 255, 255, 0.27)
 
 
 }
@@ -27,7 +27,7 @@
     width: 100%;
     border-radius: 25px;
 
-    box-shadow: 0 5px 7px lightcyan;
+    box-shadow: 0 0 7px 5px lightcyan;
 }
 
 .movie_card p {

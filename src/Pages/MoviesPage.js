@@ -37,8 +37,8 @@ const MoviesPage = () => {
             <div className={'pagination'}>
                 <p>Page {currentPage} of {totalPages}</p>
                 <button onClick={()=> toFirstPage(1, genreId)}>First Page</button>
-                <button onClick={()=> toNextPage(currentPage+1, genreId)}>Next Page</button>
-                <button onClick={()=> toPrewPage(currentPage-1, genreId)}>Prew Page</button>
+                <button onClick={()=> toPrewPage(currentPage-1, genreId)}>{`<<`} Prew Page</button>
+                <button onClick={()=> toNextPage(currentPage+1, genreId)}>Next Page {`>>`}</button>
             </div>
         </div>
     );

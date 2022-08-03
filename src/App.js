@@ -24,7 +24,7 @@ function App() {
 
 
     return (
-        <div className="wrap">
+        <div className="wrap dark_theme" id={'wrap'}>
             <div className="top_wrapper">
                 <div className={'nav'}>
                     <Header/>
@@ -34,9 +34,6 @@ function App() {
                 </div>
             </div>
             <div className={'contentBox'}>
-                <br/>
-                <br/>
-                <br/>
                 <Routes>
                     <Route path={'/'} element={<MoviesPage/>}/>
                     <Route path={'/:id'} element={<MoviesDetails/>}/>

@@ -40,7 +40,7 @@ const MovieInfo = ({movie}) => {
             <p>ID: {id}</p>
             <h2>{original_title}</h2>
             <div className={'card-genres'}>
-                Genres: {currentGenres.map(genre => <div className={'small_badge'}>{genre.name}</div> )}
+                Genres: {currentGenres.map(genre => <div className={'small_badge'} key={genre.id}>{genre.name}</div> )}
             </div>
             <h5>Release Date: {release_date}</h5>
             <span>{overview}</span>

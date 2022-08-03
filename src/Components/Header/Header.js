@@ -6,6 +6,7 @@ import {moviesAction} from "../../Redux/slices/films.slice";
 
 import './header_module.css'
 import {genresAction} from "../../Redux/slices/genres.slice";
+import Switcher from "../ThemeSwitcher/Switcher";
 
 const Header = () => {
 
@@ -18,11 +19,11 @@ const Header = () => {
 
     return (
         <div className={'header'}>
-            <Link to={'/'}>
-                <div className="project_name" onClick={() => handler()}>OWU TMBD TASK</div>
-            </Link>
-            SWITCHER
             <UserInfo/>
+            <Link to={'/'}>
+                <div className="project_name" onClick={() => handler()}>Home Page</div>
+            </Link>
+            <Switcher/>
         </div>
     );
 };

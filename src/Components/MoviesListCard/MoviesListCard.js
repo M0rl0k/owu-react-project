@@ -20,14 +20,15 @@ const MoviesListCard = ({movie}) => {
         <div className={'movie_card'}>
             <Link to={`/${id}`} state={movie}>
                 <img src={`${posterURL+poster_path}`} alt={`${original_title}`}/>
-                <h3>{original_title}</h3>
-                <p>Release Date: {release_date}</p>
-                <p>Popularity: {Math.round(popularity)}</p>
-                <p>Votes: {vote_count}</p>
-                <h4>{vote_average}</h4>
+                <div className={'details'}>
+                    <h3>{original_title}</h3>
+                    <p>Release Date: {release_date}</p>
+                    <p>Popularity: {Math.round(popularity)}</p>
+                    <p>Votes: {vote_count}</p>
+                </div>
                 <Rating
-                        iconsCount={10}
-                        initialValue={vote_average}
+                    iconsCount={10}
+                    initialValue={vote_average}
                 />
             </Link>
         </div>
