@@ -1,0 +1,49 @@
+.movie_info{
+
+    width: calc(100% - 600px);
+
+    box-sizing: border-box;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    color: beige;
+
+    background: rgba(255, 255, 255, 0.27);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 10.1);
+    backdrop-filter: blur(4.8px);
+    -webkit-backdrop-filter: blur(4.8px);
+    border: 1px solid rgba(255, 255, 255, 0.27);
+    border-radius: 25px;
+}
+.stars{
+    margin: 0;
+    padding: 0;
+}
+
+.card-genres{
+    display: flex;
+    align-items: center;
+}
+
+.small_badge {
+
+
+    margin: 0 5px;
+    padding: 5px 10px;
+
+    background: rgba(255, 255, 255, 0.27);
+    /*box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);*/
+    backdrop-filter: blur(4.8px);
+    -webkit-backdrop-filter: blur(4.8px);
+    border: 1px solid rgba(255, 255, 255, 0.27);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 1020px){
+    .movie_info{
+        width: 90%;
+    }
+}

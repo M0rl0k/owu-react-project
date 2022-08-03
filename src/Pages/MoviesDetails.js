@@ -1,23 +1,26 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {useLocation} from "react-router-dom";
-import {tmdbService} from "../Services/tmdb.service";
+import {posterURL} from "../Consts";
+import MovieInfo from "../Components/MovieInfo/MovieInfo";
+
+import './MoviesDetailsModule.css'
+
 
 const MoviesDetails = () => {
 
-    const {pathname:id} = useLocation()
-    console.log(id)
-
-    const [movie, setMovie] = useState({})
-
-    useEffect(()=>{
-        setMovie(tmdbService.getMovie(id))
-    }, [id])
-
-    console.log(movie)
+    const history = useLocation()
+    const movie = history.state
+    const {
+        original_title,
+        poster_path,
+    } = movie
 
     return (
-        <div>
-            MoviesDetails
+        <div className={'movie_details_card'}>
+            <div className={'image_box'}>
+                <img src={`${posterURL + poster_path}`} alt={`${original_title}`}/>
+            </div>
+            <MovieInfo movie={movie}/>
         </div>
     );
 };

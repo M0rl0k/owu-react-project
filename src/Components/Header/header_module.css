@@ -5,4 +5,21 @@
 
     height: 50px;
 
+    color: beige;
+}
+
+.project_name{
+
+    padding: 5px 15px;
+
+    background: rgba(255, 255, 255, 0.27);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4.8px);
+    -webkit-backdrop-filter: blur(4.8px);
+    border: 1px solid rgba(255, 255, 255, 0.27);
+    border-radius: 10px;
+}
+
+a:link, a:visited, a:active {
+    text-decoration: none;
 }

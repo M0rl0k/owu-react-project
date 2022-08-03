@@ -1,0 +1,42 @@
+.movie_details_card{
+    width: 90%;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    padding-top: 30px;
+    padding-bottom: 60px;
+
+}
+
+.movie_details_card img {
+    width: 400px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.27);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 10.1);
+    backdrop-filter: blur(4.8px);
+    -webkit-backdrop-filter: blur(4.8px);
+    border: 1px solid rgba(255, 255, 255, 0.27);
+    border-radius: 25px;
+
+}
+
+
+@media screen and (max-width: 1020px) {
+    .movie_details_card{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image_box{
+        width: 90%;
+    }
+
+    .movie_details_card img{
+        width: 100%;
+    }
+
+}

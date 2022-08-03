@@ -22,8 +22,7 @@ function App() {
     }, [dispatch])
 
 
-    // console.log(genresList)
-    // console.log(moviesList)
+
     return (
         <div className="wrap">
             <div className="top_wrapper">

@@ -3,6 +3,7 @@ import {posterURL} from "../../Consts";
 import {Link} from "react-router-dom";
 
 import './MovieCardModule.css'
+import {Rating} from "react-simple-star-rating";
 
 
 const MoviesListCard = ({movie}) => {
@@ -17,13 +18,17 @@ const MoviesListCard = ({movie}) => {
 
     return (
         <div className={'movie_card'}>
-            <Link to={`/${id}`}>
-            <img src={`${posterURL+poster_path}`} alt={`${original_title}`}/>
-            <h3>{original_title}</h3>
-            <p>Release Date: {release_date}</p>
-            <p>Popularity: {Math.round(popularity)}</p>
-            <p>Votes: {vote_count}</p>
-            <h4>{vote_average}</h4>
+            <Link to={`/${id}`} state={movie}>
+                <img src={`${posterURL+poster_path}`} alt={`${original_title}`}/>
+                <h3>{original_title}</h3>
+                <p>Release Date: {release_date}</p>
+                <p>Popularity: {Math.round(popularity)}</p>
+                <p>Votes: {vote_count}</p>
+                <h4>{vote_average}</h4>
+                <Rating
+                        iconsCount={10}
+                        initialValue={vote_average}
+                />
             </Link>
         </div>
     );

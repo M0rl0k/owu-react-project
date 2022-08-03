@@ -3,12 +3,13 @@ import {tmdbService} from "../../Services/tmdb.service";
 
 let initialState = {
     genres: [],
+    selectedGenre:null
 };
 
 const GET_Genres = createAsyncThunk(
     'genresSlice/GET_Genres',
     async (_) => {
-        const {data} =  await tmdbService.getGenres()
+        const {data} = await tmdbService.getGenres()
         return data
     }
 );
@@ -17,8 +18,12 @@ const GET_Genres = createAsyncThunk(
 const genresSlice = createSlice({
     name: 'genresSlice',
     initialState,
-    reducers:{},
-    extraReducers:(builder) => {
+    reducers: {
+        setGenre: (state, action) => {
+            state.selectedGenre = action.payload
+        }
+    },
+    extraReducers: (builder) => {
         builder
             .addCase(GET_Genres.fulfilled, (state, action) => {
                 state.genres = action.payload.genres
@@ -26,10 +31,11 @@ const genresSlice = createSlice({
     }
 });
 
-const {reducer:GenresReducer} = genresSlice
+const {reducer: GenresReducer, actions:{setGenre}} = genresSlice
 
 const genresAction = {
-    GET_Genres
+    GET_Genres,
+    setGenre
 }
 
 export {GenresReducer, genresAction}
